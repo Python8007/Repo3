@@ -1,0 +1,61 @@
+git status
+git branch --list all the branches you have
+git log
+git status
+git checkout branch_name -- active particular branch
+git add file_name
+git commit -m "message that you want to add"
+
+merge two branches
+first go into base branch
+active base branch
+git push branch_name --
+git pull 
+
+
+
+Open git bash/cmd in project folder.
+Create Branch command
+For new branch,
+Git checkout -b dev_project-name_name
+If Already created, then only checkout the branch,
+Git checkout dev_project-name_name
+Make your branch up to date with “development” branch
+For complete code reset
+Git fetch --all
+Git reset --hard origin/development  (only if required to reset the code. All changes will be lost, if used during development)
+For getting updates only
+Git fetch --all
+Git rebase origin/development
+If any conflicts,
+Do not exit the bash/cmd.
+Fix conflicts manually from IDE(VS code,..)
+Save the File.
+Return to bash/cmd.
+Git add .
+Git rebase --continue
+Commit and Push code to the Repo
+Save all changes
+Ensure the files which are changed
+Git status  (red colour shows files not added to the que)
+Add files to the stack
+Git add .    (use ‘.’ For adding all files listed. Or provide path of each file you need to add separately)
+Confirm files added
+Git status (added files under green colour)
+Commit with message
+Git commit -m “commit message here”
+Before pushing to repo, rebase again with “development” branch to make sure everything UpToDate
+Git fetch --all
+Git rebase origin/development
+Solve conflicts If any , else proceed to push
+Push the code to repo
+Git push origin dev_project-name_name (please note that it is single space used instead of ‘/’ while pushing. Also please don’t use ‘--force’ for force push)
+Raise Pull Request
+Go to your repo in browser
+Click branches under ‘Repos’ tab
+Select your branch
+Make sure your commit is reflected under ‘history’ tab.
+Click “new pull request” from  Pull request tab
+Choose “your branch” into “development” branch. (Do not choose “master” which is default.)
+Add title and description, Click “CREATE”.
+Once Approved, merge the Pull Request. Never Approve PR your self.
